@@ -2,23 +2,31 @@ import {
     NavLink,
     Outlet
  } from 'react-router-dom';
+ import Logo from '../components/Logo';
 
 export function MainLayout() {
     return (
         <>
-            <nav className='navbar' >
-                <NavLink to="/" className={({ isActive }) => isActive ? 'navbar__element tab-current' : 'navbar__element'}>Home</NavLink>
+            <div className="flex flex-row justify-between">
 
-                <NavLink to="/aboutme" className={({ isActive }) => isActive ? 'navbar__element tab-current' : 'navbar__element'}>About me</NavLink>
+                <Logo />
 
-                <NavLink to="/cv" className={({ isActive }) => isActive ? 'navbar__element tab-current' : 'navbar__element'}>CV</NavLink>
+                <nav className='flex flex-col tablet:flex-row' >
+                    <NavLink to="/" className={({ isActive }) => isActive ? 'navbar__element tab-current' : 'navbar__element'}>Home</NavLink>
 
-                <NavLink to="/projects" className={({ isActive }) => isActive ? 'navbar__element tab-current' : 'navbar__element'}>My projects</NavLink>  
+                    <NavLink to="/aboutme" className={({ isActive }) => isActive ? 'navbar__element tab-current' : 'navbar__element'}>About me</NavLink>
 
-                <NavLink to="/skills" className={({ isActive }) => isActive ? 'navbar__element tab-current' : 'navbar__element'}>My skills</NavLink>     
+                    <NavLink to="/cv" className={({ isActive }) => isActive ? 'navbar__element tab-current' : 'navbar__element'}>CV</NavLink>
 
-                <NavLink className={({ isActive }) => isActive ? 'navbar__element tab-current' : 'navbar__element'} to="/contact" >Contact</NavLink>
-            </nav>
+                    <NavLink to="/projects" className={({ isActive }) => isActive ? 'navbar__element tab-current' : 'navbar__element'}>My projects</NavLink>  
+
+                    <NavLink to="/skills" className={({ isActive }) => isActive ? 'navbar__element tab-current' : 'navbar__element'}>My skills</NavLink>     
+
+                    <NavLink className={({ isActive }) => isActive ? 'navbar__element tab-current' : 'navbar__element'} to="/contact" >Contact</NavLink>
+                </nav>
+
+            </div>
+
             <Outlet/>
         </>
     )
