@@ -4,4 +4,6 @@
     --breakpoint-*: initial;
     --breakpoint-tablet: 770px;
     --breakpoint-desktop: 1200px;
+
+    --font-display: "Poppins", sans-serif;
   }

@@ -6,7 +6,7 @@ import {
 
 export function MainLayout() {
     return (
-        <>
+        <div className="p-4">
             <div className="flex flex-row justify-between">
 
                 <Logo />
@@ -28,6 +28,6 @@ export function MainLayout() {
             </div>
 
             <Outlet/>
-        </>
+        </div>
     )
 }
