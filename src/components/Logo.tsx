@@ -1,5 +1,3 @@
-import React from 'react'
-
 export default function Logo() {
   return (
     <div className="flex flex-col tablet:flex-row tablet:items-center font-display">
@@ -7,7 +5,7 @@ export default function Logo() {
         <div className="flex flex-row items-center font-semibold text-xl">
             <div className="h-[1em] w-[1em] bg-blue-500 mr-[1em]"></div>
             <div>
-                <p className="-xl">Kamil Markowski</p>
+                <p>Kamil Markowski</p>
             </div>
         </div>
 

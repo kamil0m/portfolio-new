@@ -1,8 +1,9 @@
 import {
-    NavLink,
+    // NavLink,
     Outlet
  } from 'react-router-dom';
  import Logo from '../components/Logo';
+ import Navbar from '../components/Navbar';
 
 export function MainLayout() {
     return (
@@ -11,7 +12,9 @@ export function MainLayout() {
 
                 <Logo />
 
-                <nav className='flex flex-col tablet:flex-row' >
+                <Navbar />
+
+                {/* <nav className='flex flex-col tablet:flex-row' >
                     <NavLink to="/" className={({ isActive }) => isActive ? 'navbar__element tab-current' : 'navbar__element'}>Home</NavLink>
 
                     <NavLink to="/aboutme" className={({ isActive }) => isActive ? 'navbar__element tab-current' : 'navbar__element'}>About me</NavLink>
@@ -23,7 +26,7 @@ export function MainLayout() {
                     <NavLink to="/skills" className={({ isActive }) => isActive ? 'navbar__element tab-current' : 'navbar__element'}>My skills</NavLink>     
 
                     <NavLink className={({ isActive }) => isActive ? 'navbar__element tab-current' : 'navbar__element'} to="/contact" >Contact</NavLink>
-                </nav>
+                </nav> */}
 
             </div>
 
