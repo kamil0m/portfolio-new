@@ -7,30 +7,18 @@ import {
 
 export function MainLayout() {
     return (
-        <div className="p-4">
-            <div className="flex flex-row justify-between">
+        <div className="p-4 bg-main-verylight h-screen">
+
+            <div className="flex flex-row justify-between h-24 items-center">
 
                 <Logo />
 
                 <Navbar />
 
-                {/* <nav className='flex flex-col tablet:flex-row' >
-                    <NavLink to="/" className={({ isActive }) => isActive ? 'navbar__element tab-current' : 'navbar__element'}>Home</NavLink>
-
-                    <NavLink to="/aboutme" className={({ isActive }) => isActive ? 'navbar__element tab-current' : 'navbar__element'}>About me</NavLink>
-
-                    <NavLink to="/cv" className={({ isActive }) => isActive ? 'navbar__element tab-current' : 'navbar__element'}>CV</NavLink>
-
-                    <NavLink to="/projects" className={({ isActive }) => isActive ? 'navbar__element tab-current' : 'navbar__element'}>My projects</NavLink>  
-
-                    <NavLink to="/skills" className={({ isActive }) => isActive ? 'navbar__element tab-current' : 'navbar__element'}>My skills</NavLink>     
-
-                    <NavLink className={({ isActive }) => isActive ? 'navbar__element tab-current' : 'navbar__element'} to="/contact" >Contact</NavLink>
-                </nav> */}
-
             </div>
 
             <Outlet/>
+
         </div>
     )
 }
