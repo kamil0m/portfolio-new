@@ -12,7 +12,6 @@ export default function Navbar() {
         mobileMenu?.classList.toggle("tablet:flex");
     }
 
-
   return (
     <>
         <div>
@@ -31,9 +30,9 @@ export default function Navbar() {
             <nav 
                 id="navbar__mobile"
                 className="
-                flex items-center
-                absolute left-0 top-0 w-full bg-main flex-col justify-center h-screen z-10 uppercase font-semibold text-2xl 
-                tablet:static tablet:flex-row tablet:justify-end tablet:h-auto tablet:bg-transparent tablet:w-auto tablet:gap-4 tablet:font-light tablet:text-sm"
+                items-center
+                hidden flex absolute left-0 top-0 w-full bg-main flex-col justify-center h-screen z-10 uppercase font-semibold text-2xl 
+                tablet:static tablet:flex tablet:flex-row tablet:justify-end tablet:h-auto tablet:bg-transparent tablet:w-auto tablet:gap-4 tablet:font-light tablet:text-sm"
                 onClick={() => toggleMenu()} 
                 >
 
@@ -41,7 +40,7 @@ export default function Navbar() {
 
                     <NavLink to="/aboutme" className="my-3 tablet:my-0 aria-[current=page]:text-accent">About me</NavLink>
 
-                    <NavLink to="/cv" className="my-3 tablet:my-0 aria-[current=page]:text-accent">CV</NavLink>
+                    <NavLink to="/projects" className="my-3 tablet:my-0 aria-[current=page]:text-accent">CV</NavLink>
 
                     <NavLink to="/projects" className="my-3 tablet:my-0 aria-[current=page]:text-accent">My projects</NavLink>  
 

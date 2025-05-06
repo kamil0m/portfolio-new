@@ -1,5 +1,4 @@
 import {
-    // NavLink,
     Outlet
  } from 'react-router-dom';
  import Logo from '../components/Logo';
@@ -7,18 +6,19 @@ import {
 
 export function MainLayout() {
     return (
-        <div className="p-4 bg-main-verylight h-screen">
+        <>
+            <div className="p-4 bg-main-verylight">
 
-            <div className="flex flex-row justify-between h-24 items-center">
+                <div className="flex flex-row justify-between h-24 items-center">
 
-                <Logo />
+                    <Logo />
 
-                <Navbar />
+                    <Navbar />
+
+                </div>
 
             </div>
-
             <Outlet/>
-
-        </div>
+        </>
     )
 }
