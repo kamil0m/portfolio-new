@@ -1,24 +1,17 @@
 import {
     Outlet
  } from 'react-router-dom';
- import Logo from '../components/Logo';
- import Navbar from '../components/Navbar';
+ import Header from '../components/Header';
+ import Footer from '../components/Footer';
 
 export function MainLayout() {
     return (
-        <>
-            <div className="p-4 bg-main-verylight">
+        <div className="flex flex-col min-h-dvh w-full selection:bg-green-400">
 
-                <div className="flex flex-row justify-between h-24 items-center">
-
-                    <Logo />
-
-                    <Navbar />
-
-                </div>
-
-            </div>
+            <Header/>
             <Outlet/>
-        </>
+            <Footer/>
+
+        </div>
     )
 }

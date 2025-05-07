@@ -23,7 +23,7 @@ export default function Navbar() {
                 onChange={() => toggleMenu()}
             />
                 
-            <label className="text-[3em] absolute right-0 top-0 z-11 p-4 tablet:hidden" htmlFor="trigger" >
+            <label className="text-[2em] absolute right-0 top-0 z-11 mt-5 mr-6 tablet:hidden" htmlFor="trigger" >
                 <FaBars />
             </label>
 
@@ -36,9 +36,7 @@ export default function Navbar() {
                 onClick={() => toggleMenu()} 
                 >
 
-                    <NavLink to="/" className="my-3 tablet:my-0 aria-[current=page]:text-accent">Home</NavLink>
-
-                    <NavLink to="/aboutme" className="my-3 tablet:my-0 aria-[current=page]:text-accent">About me</NavLink>
+                    <NavLink to="/" className="my-3 tablet:my-0 aria-[current=page]:text-accent">About me</NavLink>
 
                     <NavLink to="/projects" className="my-3 tablet:my-0 aria-[current=page]:text-accent">CV</NavLink>
 
