@@ -38,7 +38,7 @@ export default function Navbar() {
 
                     <NavLink to="/" className="my-3 tablet:my-0 aria-[current=page]:text-accent">About me</NavLink>
 
-                    <NavLink to="/projects" className="my-3 tablet:my-0 aria-[current=page]:text-accent">CV</NavLink>
+                    <NavLink to="/cv" className="my-3 tablet:my-0 aria-[current=page]:text-accent">CV</NavLink>
 
                     <NavLink to="/projects" className="my-3 tablet:my-0 aria-[current=page]:text-accent">My projects</NavLink>  
 

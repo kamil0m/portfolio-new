@@ -16,8 +16,26 @@
     @apply text-5xl font-bold tablet:text-8xl
   }
 
+  h2 {
+    @apply text-4xl font-bold tablet:text-6xl
+  }
+
+  h2::before {
+    content: ' ';
+    position: absolute;
+    transform: translate(-150%, 50%);
+    background-color: theme('color-accent');
+    height: 20px;
+    width: 20px;
+    margin-right: 0.5rem;
+  }
+
   h3 {
     @apply text-2xl font-normal tablet:text-3xl
+  }
+
+  h4 {
+    @apply text-xl font-semibold tablet:text-2xl
   }
 
   h5 {
@@ -46,6 +64,12 @@
 }
 
 @layer components {
+
+  .bg-x-bicolor {
+    background: linear-gradient(to left, rgba(255, 255, 255, 1) 58%, rgba(243, 233, 227, 1) 42%);
+    /* background: linear-gradient(to left, theme('color-main-verylight') 58%, theme('color-main') 42%); */
+  }
+
   .button {
     @apply inline-flex items-center justify-center rounded-full text-xl uppercase min-w-35 h-10 tablet:text-sm tablet:min-w-45;
   }
@@ -58,7 +82,8 @@
     @apply border-black border active:bg-accent active:border-accent active:text-white
   }
 
-  .bg-x-bicolor {
-    background: linear-gradient(to left, rgba(255, 255, 255, 1) 58%, rgba(243, 233, 227, 1) 42%)!important;
+  .card {
+    @apply shadow-2xl p-6;
   }
+
 }

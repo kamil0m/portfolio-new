@@ -5,7 +5,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function CardPerson(props: object) {
   return (
-    <div className="flex flex-col items-center w-[340px] h-auto bg-main shadow-2xl
+    <div className="card flex flex-col items-center w-[340px] h-auto bg-main 
     tablet:top-200 tablet:translate-x-1/2">
         <div className="flex flex-col items-center w-40">
           <div className="w-full aspect-square bg-cover rounded-full mt-10"
