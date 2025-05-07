@@ -2,8 +2,9 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <div className="flex flex-col h-30 w-full px-6 mt-5 bg-white font-extralight">
-      <div className="grid grid-cols-2">
+    <div className="flex flex-col h-auto w-full px-6 bg-white font-extralight 
+    tablet:flex-row-reverse tablet:justify-between tablet:items-start tablet:pb-3">
+      <div className="grid grid-cols-2 tablet:grid-cols-3 tablet:width-4/5 tablet:gap-6 tablet:text-center">
         <div>
           <h5 className="my-3">Tel</h5>
           <div className="text-xs">(+33) 06 12 87 41 45</div>
@@ -14,7 +15,7 @@ export default function Footer() {
         </div>
         <div>
           <h5 className="my-3">En ligne</h5>
-          <div className="flex text-md font-light gap-2">
+          <div className="flex text-md font-light gap-2 tablet:justify-center">
             <a target="_blank" href="https://github.com/kamil0m">
               <FaGithub />
             </a>
