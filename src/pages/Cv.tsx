@@ -2,6 +2,7 @@ import MainBackground from "../components/MainBackground"
 import CardExperience from "../components/CardExperience"
 import CardEducation from "../components/CardEducation"
 import CardSkills from "../components/CardSkills"
+import CardHobbies from "../components/CardHobbies"
 import cvData from "../assets/cv_data.json"
 
 export default function Cv() {
@@ -40,15 +41,7 @@ export default function Cv() {
 
           <section className="pb-6">
             <h4 className="pt-10 pb-6">Hobbies</h4>
-            <div className="card flex flex-col bg-main-light py-10 mb-8 w-full
-            tablet:flex-row tablet:justify-between">
-              <h5 className="mb-2">What I do when the code compiles (on the first try)</h5>
-              {cvData.hobbies.map((hobby, index) => (
-                <p key={index}>
-                  {hobby.name}
-                </p>
-              ))}
-            </div>
+            <CardHobbies hobbies={cvData.hobbies} />
           </section>
 
         </div>

@@ -5,7 +5,7 @@ export default function Cardeducation({ education }: {education: Education}) {
   return (
     <div className="card flex flex-col bg-main-light py-10 mb-8 w-full
     tablet:flex-row tablet:justify-between">
-        <div>
+        <div className="tablet:w-2/5">
             <h5 className="text-accent">{education.end_date}</h5>
             <div className="uppercase mt-2">{education.title}</div>
             <div className="mt-3 font-light text-sm">

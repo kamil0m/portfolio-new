@@ -7,13 +7,11 @@ export default function CardSkill({ skills }: {skills: Skills}) {
     }
 
     skills.technical = orderAlphabetically(skills.technical);
-    console.log(skills.technical);
     skills.soft = orderAlphabetically(skills.soft);
     skills.languages = orderAlphabetically(skills.languages);
 
   return (
-    <div className="card flex flex-col bg-main-light py-10 mb-8 w-full
-    tablet:flex-row tablet:justify-between">
+    <div className="card flex flex-col bg-main-light py-10 mb-8 w-full">
 
         <div className="mb-4">
             <h5>Technical skills</h5>
