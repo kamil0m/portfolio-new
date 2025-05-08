@@ -1,94 +1,300 @@
 {
-    "education": [
-        {
-        "title": "Udemy Courses",
-        "topics": ["TypeScript", "Data Modeling", "Clean Code"]
-        },
-        {
-        "title": "Node.JS for Developers",
-        "provider": "Coders Lab",
-        "format": "Lectures and practical workshops with instructor",
-        "curriculum": [
-            "Asynchronous programming",
-            "Events",
-            "File system manipulation",
-            "Streams",
-            "RESTful communication",
-            "ExpressJS",
-            "MongoDB",
-            "CRUD basics"
-        ]
-        },
-        {
-        "title": "JavaScript Developer",
-        "provider": "Coders Lab",
-        "format": "Lectures and practical workshops with instructor",
-        "curriculum": [
-            "Advanced HTML and CSS",
-            "SASS and Responsive Web Design",
-            "JavaScript",
-            "ECMAScript 6",
-            "React",
-            "Final project"
-        ]
-        },
-        {
-        "title": "Master’s Degree in Teaching French as a Foreign Language",
-        "institution": "University of Lille",
-        "focus": "Computational linguistics – corpus analysis and algorithm design for natural language processing"
-        }
-    ],
-    "experience": [
+  "education": [
+    {
+      "id": "1",
+      "start_date": "",
+      "end_date": "August 2025",
+      "title": "",
+      "provider": "Udemy Courses",
+      "format": "Online",
+      "speciality": "",
+      "topics": [
+        "TypeScript", 
+        "Data Modeling", 
+        "Clean Code"
+      ]
+    },
+    {
+      "id": "2",
+      "start_date": "January 2018",
+      "end_date": "August 2022",
+      "title": "Node.JS for Developers",
+      "provider": "Coders Lab",
+      "format": "Lectures and practical workshops with instructor",
+      "speciality": "",
+      "topics": [
+        "NodeJS",
+        "ExpressJS",
+        "Asynch. programming",
+        "Events",
+        "Streams",
+        "File system manipulation",
+        "RESTful communication",
+        "MongoDB",
+        "CRUD basics"
+      ]
+    },
+    {
+      "id": "3",
+      "start_date": "January 2018",
+      "end_date": "August 2022",
+      "title": "JavaScript Developer",
+      "provider": "Coders Lab",
+      "format": "Lectures and practical workshops with instructor",
+      "speciality": "",
+      "topics": [
+        "JavaScript",
+        "ECMAScript 6",
+        "React",
+        "RWD",
+        "API",
+        "Advanced HTML",
+        "Advanced CSS",
+        "SASS"
+      ]
+    },
+    {
+      "id": "4",
+      "start_date": "January 2018",
+      "end_date": "August 2022",
+      "title": "Master’s Degree in Teaching French as a Foreign Language",
+      "provider": "University of Lille, University of Warsaw",
+      "format": "",
+      "speciality": "Computational linguistics – corpus analysis and algorithm design for natural language processing",
+      "topics": [
+        "Nooj",
+        "R",
+        "Concat"
+      ]
+    }
+  ],
+  "experience": [
     {
       "id": "1",
       "start_date": "February 2025",
-      "position": "Web Developer (part-time, 10h/week)",
+      "position": "Web Developer ",
       "organization": "Non-profit sector",
       "location": "Lille",
-      "responsibilities": "<p>Website development for the DDLille association.</p> <h3>Team collaboration</h3> <p>using Agile methodologies. Integration of CMS and APIs</p>"
-      
+      "responsibilities": "<p>I am currently developing from scratch a website for the DDLille Association together with a small development team in SCRUM methodology.</p><p class='mt-2 text-xs'>(part-time position, 10h/week)</p>"
     },
     {
-        "id": "2",
+      "id": "2",
       "start_date": "April 2019",
       "end_date": "August 2024",
       "position": "Head of Studies for International Academy",
       "organization": "University of Lille",
-      "location": "Lille",
-      "responsibilities": 
-        "<p>Website creation and management using WordPress</p> <p>Design, management, and coordination of training programs</p> <p>Team leadership, staff supervision, HR tasks</p>"
-      
+      "location": "",
+      "responsibilities": "<p>I designed and managed the service website using WordPress, focusing on usability, content structure, and user experience. I designed, led, and coordinated training programs, integrating digital tools and innovative learning solutions. I supervised teams and managed projects, including recruitment, HR tasks, and collaborative workflow organization.</p>"
     },
     {
-        "id": "3",
+      "id": "3",
       "start_date": "January 2018",
       "end_date": "August 2022",
-      "position": "French as a Foreign Language Instructor",
+      "position": "French as a Foreign Language Teacher",
       "organization": "ENSAM, JUNIA, ComUE, University of Lille",
-      "location": "Lille, Villeneuve-d’Ascq",
-      "responsibilities": "<p>Design and delivery of pedagogical sequences</p><p>Promoting intercultural awareness</p><p>Language level assessment</p>"
-      
+      "location": "Lille",
+      "responsibilities": "<p>I designed and delivered engaging learning sequences, both in-person and online, using a variety of digital tools to enhance interactivity and accessibility. I promoted intercultural awareness to support diverse learners and foster inclusive environments, while also assessing language proficiency to adapt instruction to individual needs. This role strengthened my ability to communicate complex ideas clearly, manage digital content effectively, and create user-centered experiences-skills that directly inform my work as a web developer.</p>"
     },
     {
-        "id": "4",
+      "id": "4",
       "start_date": "August 2012",
       "end_date": "June 2016",
       "position": "Business Travel Consultant",
       "location": "Villeneuve-d’Ascq, Warsaw",
-      "responsibilities": 
-        "<p>GDS systems expert and trainer (Amadeus, Sabre, Galileo)</p><p>Reservation management and customer relations</p> <p>Communication with business partners in English, French and Polish</p> <p>Effective resolution of urgent travel issues</p>"
-      
+      "responsibilities": "<p>As a corporate travel agent, I mastered and trained others in using major GDS systems such as Amadeus, Sabre, and Galileo, ensuring efficient and accurate reservation management. I maintained strong client relationships and communicated seamlessly with international partners in English, French, and Polish. My role required quick thinking and problem-solving to resolve urgent travel issues under pressure — skills that sharpened my ability to manage complex systems, deliver reliable solutions, and communicate effectively across diverse teams, all of which now support my transition into web development.</p>"
     },
     {
-        "id": "5",
+      "id": "5",
       "start_date": "January 2008",
       "end_date": "December 2017",
       "position": "Volunteer Work, Internships, and Student Jobs",
-      "fields": ["Education", "Interpretation", "Retail", "Hospitality", "Construction"],
       "location": "Lille, Warsaw",
-      "responsibilities": 
-        "<p>French Embassy in Poland</p><p>Singa France Association</p> <p>French & Polish National Education systems</p>"
-      
+      "responsibilities": "<p>Fields: Education, Interpretation, Retail, Hospitality, Construction</p><p>French Embassy in Poland, Singa France, French & Polish National Education</p>"
+    }
+  ],
+  "skills": {
+    "technical": [
+      {
+        "id": "1",
+        "name": "JavaScript",
+        "levelOutOf5": 4
+      },
+      {
+        "id": "2",
+        "name": "TypeScript",
+        "levelOutOf5": 3
+      },
+      {
+        "id": "3",
+        "name": "React",
+        "levelOutOf5": 4
+      },
+      {
+        "id": "4",
+        "name": "NodeJS",
+        "levelOutOf5": 3
+      },
+      {
+        "id": "5",
+        "name": "ExpressJS",
+        "levelOutOf5": 2
+      },
+      {
+        "id": "6",
+        "name": "MongoDB",
+        "levelOutOf5": 2
+      },
+      {
+        "id": "7",
+        "name": "API",
+        "levelOutOf5": 4
+      },
+      {
+        "id": "8",
+        "name": "CRUD",
+        "levelOutOf5": 2
+      },
+      {
+        "id": "9",
+        "name": "RWD",
+        "levelOutOf5": 4
+      },
+      {
+        "id": "10",
+        "name": "CSS",
+        "levelOutOf5": 5
+      },
+      {
+        "id": "11",
+        "name": "HTML",
+        "levelOutOf5": 5
+      },
+      {
+        "id": "12",
+        "name": "SASS",
+        "levelOutOf5": 5
+      },
+      {
+        "id": "13",
+        "name": "Git",
+        "levelOutOf5": 4
+      },
+      {
+        "id": "14",
+        "name": "Python",
+        "levelOutOf5": 2
+      },
+      {
+        "id": "15",
+        "name": "PostgreSQL",
+        "levelOutOf5": 1
+      },
+      {
+        "id": "16",
+        "name": "Java",
+        "levelOutOf5": 1
+      },
+      {
+        "id": "17",
+        "name": "Tailwind",
+        "levelOutOf5": 4
+      },
+      {
+        "id": "18",
+        "name": "Bootstrap",
+        "levelOutOf5": 3
+      },
+      {
+        "id": "19",
+        "name": "SCRUM",
+        "levelOutOf5": 3
+      },
+      {
+        "id": "20",
+        "name": "Kanban",
+        "levelOutOf5": 3
+      },
+      {
+        "id": "21",
+        "name": "Agile",
+        "levelOutOf5": 4
+      },
+      {
+        "id": "22",
+        "name": "OOP",
+        "levelOutOf5": 4
+      },
+      {
+        "id": "23",
+        "name": "Wordpress",
+        "levelOutOf5": 2
+      },
+      {
+        "id": "24",
+        "name": "Strapi",
+        "levelOutOf5": 3
+      }
+    ],
+    "soft": [
+      {
+        "id": "1",
+        "name": "Teamwork",
+        "levelOutOf5": 4
+      },
+      {
+        "id": "2",
+        "name": "Cross-cultural communication",
+        "levelOutOf5": 5
+      },
+      {
+        "id": "3",
+        "name": "Problem-solving",
+        "levelOutOf5": 4
+      },
+      {
+        "id": "4",
+        "name": "Adaptability",
+        "levelOutOf5": 5
+      }
+    ],
+    "languages": [
+      {
+        "id": "1",
+        "name": "French",
+        "levelOutOf5": 5
+      },
+      {
+        "id": "2",
+        "name": "English",
+        "levelOutOf5": 4
+      },
+      {
+        "id": "3",
+        "name": "Polish",
+        "levelOutOf5": 3
+      }
+    ]
+  },
+  "hobbies": [
+    {
+      "id": "1",
+      "name": "Artificial Intelligence",
+      "levelOutOf5": 3
+    },
+    {
+      "id": "2",
+      "name": "Traveling",
+      "levelOutOf5": 4
+    },
+    {
+      "id": "3",
+      "name": "Linguistics",
+      "levelOutOf5": 3
+    },
+    {
+      "id": "4",
+      "name": "Hiking",
+      "levelOutOf5": 3
     }
   ]
-  }
+}

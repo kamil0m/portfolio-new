@@ -17,17 +17,23 @@
   }
 
   h2 {
-    @apply text-4xl font-bold tablet:text-6xl
+    @apply relative text-4xl font-bold tablet:text-6xl
   }
 
   h2::before {
     content: ' ';
     position: absolute;
-    transform: translate(-150%, 50%);
+    transform: translate(-150%, 25%);
     background-color: theme('color-accent');
-    height: 20px;
-    width: 20px;
-    margin-right: 0.5rem;
+    height: 25px;
+    width: 25px;
+  }
+
+  @media (min-width: 770px) {
+    h2::before {
+      height: 40px; 
+      width: 40px;
+    }
   }
 
   h3 {
@@ -42,9 +48,9 @@
     @apply text-sm font-semibold
   }
 
-  p {
+  /* p {
     @apply mt-5
-  }
+  } */
 }
 
 @theme {
