@@ -1,0 +1,96 @@
+[
+    {
+        "id": "lexiflash",
+        "name": "LexiFlash",
+        "description": "A vocabulary learning application designed for individual users. Utilizing vocabulary lists and flashcards, it aims to facilitate effective language learning. Unlike many other vocabulary building apps, LexiFlash offers unique features, including personalized vocabulary sets and immediate feedback on incorrect answers. This ensures a customized learning experience, allowing users to create their own vocabulary lists and review correct answers before making another attempt.",
+        "context": "This project was a final boothcamp validation project designed to offer an easy-to-use vocabulary learning solution directly in the browser, with no installation required.",
+        "technologiesUsed": [
+            {
+                "id": "1",
+                "name": "JavaScript & Webpack",
+                "purpose": "Structured code modularly for efficient web application development."
+            }, {
+                "id": "2",
+                "name": "SASS & Parcel",
+                "purpose": "For responsive styling and seamless development workflow."
+            }, {
+                "id": "3",
+                "name": "Supabase",
+                "purpose": "Used as an external database server to manage and store project data. It provided real-time data synchronization and streamlined back-end operations, ensuring efficient data handling and seamless integration with the application."
+            }, {
+                "id": "4",
+                "name": "React",
+                "purpose": "Used to build the application's user interface with a component-based architecture. It enabled efficient rendering, dynamic updates, and the creation of a responsive and interactive user experience."
+            }
+        ],
+        "technologiesOthers": [],
+        "color": "#f5f5f5",
+        "image": "https://res.cloudinary.com/daqj3iucx/image/upload/v1743874566/lexiflash_ji2ikm.png",
+        "urlGithub": "https://github.com/kamil0m/LexiFlash",
+        "urlDemo": "https://lexiflash.vercel.app/"
+    }, {
+        "id": "bestshop",
+        "name": "Bestshop",
+        "description": "For this project, I developed an interactive calculator that dynamically updates pricing based on user inputs. The calculator handles various events like changes, clicks, and focus/blur actions to provide a seamless user experience.",
+        "context": "This project was part of a Coders Lab workshop focused on reinforcing JavaScript skills through practical application. It involved creating a user-friendly tool to enhance the BestShop website's functionality.",
+        "technologiesUsed": [
+            {
+                "id": "1",
+                "name": "JavaScript",
+                "purpose": "For DOM manipulation and real-time updates."
+            }, {
+                "id": "2",
+                "name": "SASS",
+                "purpose": "Used for responsive and maintainable styling."
+            }, {
+                "id": "3",
+                "name": "Parcel",
+                "purpose": "Module bundler for efficient code management."
+            }, {
+                "id": "4",
+                "name": "CSS",
+                "purpose": "Overall layout."
+            }
+        ],
+        "technologiesOthers": [
+            {
+                "id": "5",
+                "name": "HTML",
+                "purpose": "Structured the interactive elements."
+            }
+        ],
+        "color": "#f5f5f5",
+        "image": "https://res.cloudinary.com/daqj3iucx/image/upload/v1743874630/bestshop_ju7ucb.png",
+        "urlGithub": "https://github.com/kamil0m/Workshop_BestShop.git",
+        "urlDemo": "https://workshop-best-shop.vercel.app/"
+    }, {
+        "id": "jedzonko",
+        "name": "Zaplanuj Jedzonko",
+        "description": "For this project, I collaborated with a team of two other students in a simulation of real-world teamwork in a web application development environment using the SCRUM methodology. The project involved replicating the dynamics of a development team, emphasizing code reviews, problem-solving, and integrating code with teammates. It also showcased my ability to deliver engaging front-end solutions with dynamic interactions and responsive design.",
+        "context": "This project was part of a Coders Lab SCRUM Project — a week-long sprint, where I worked in a team of three. The focus was on self-directed learning with minimal instructor intervention, allowing us to develop collaborative skills and experience a workflow similar to real-world software projects.",
+        "technologiesUsed": [
+            {
+                "id": "1",
+                "name": "JavaScript & Webpack",
+                "purpose": "Structured code modularly for efficient web application development."
+            }, {
+                "id": "2",
+                "name": "SASS & Parcel",
+                "purpose": "For responsive styling and seamless development workflow."
+            }, {
+                "id": "3",
+                "name": "Scrum",
+                "purpose": "Simulate a week-long sprint, emphasizing agile practices such as daily stand-ups, sprint planning, and retrospectives. This approach fostered teamwork, self-organization, and iterative development, mimicking real-world software project workflows."
+            }, {
+                "id": "4",
+                "name": "Kanban",
+                "purpose": "Used for sprint planning and retrospectives."
+            }
+        ],
+        "technologiesOthers": [],
+        "color": "#f5f5f5",
+        "image": "https://res.cloudinary.com/daqj3iucx/image/upload/v1743874606/jedzonko_m1bz03.png",
+        "urlGithub": "https://github.com/kamil0m/scrum_lab.git",
+        "urlDemo": "https://scrum-lab.vercel.app/"
+    }
+]

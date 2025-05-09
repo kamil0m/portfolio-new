@@ -1,5 +1,10 @@
 export default interface Skill {
   id: string;
   name: string;
-  levelOutOf5: number;
+  context: string;
+  description: string;
+  skillsUsed: string[];
+  image: string;
+  linkGithub: string;
+  linkDemo: string;
 }

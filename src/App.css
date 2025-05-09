@@ -92,4 +92,14 @@
     @apply shadow-2xl p-6;
   }
 
+  .title-project::before {
+    content: ' ';
+    position: absolute;
+    z-index: 2;
+    transform: translateY(50%);
+    background-color: theme('color.accent');
+    height: 35px;
+    width: 10px;
+  }
+
 }
