@@ -27,7 +27,7 @@ export default function CardProject({ project }: {project: Project}) {
 
       </div>
 
-      <div className="bg-[url({project.image})] bg-cover aspect-3/2"
+      <div className="bg-[url({project.image})] bg-cover aspect-3/2 tablet:w-3/5"
       style={{ backgroundImage: `url(${project.image})` }}></div>
 
     </div>
