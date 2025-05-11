@@ -23,12 +23,12 @@ export default function Input({ label, type, id, placeholder }: FormInputProps) 
 
     return (
         <div >
-            <label className="flex flex-col mb-2 tablet:flex-row font-light text-lg focus:text-accent" htmlFor={id}>
+            <label className="flex flex-col mb-2 font-light text-lg focus:text-accent" htmlFor={id}>
                 
                 {label}:
 
                 <input 
-                    className="h-10 border-b-1 focus:border-accent focus:border-b-2 focus:outline-none" 
+                    className="h-10 border-b-1 focus:border-accent focus:border-b-2 focus:outline-none Xtablet:mr-2" 
                     type={type} 
                     id={id} 
                     name={id} 

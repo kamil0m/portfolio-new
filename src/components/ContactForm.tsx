@@ -28,14 +28,13 @@ export default function ContactForm() {
         
         console.log(formData)
         successMessage.classList.remove('hidden')
-
     }
 
     return (
         <div className="card bg-main-verylight flex flex-col my-5">
             <form className="flex flex-col w-full text-start" onSubmit={handleSubmit}>
                 
-                <div className="flex flex-col tablet:flex-row">
+                <div className="flex flex-col tablet:flex-row tablet:gap-x-2">
                     < Input 
                         label="First name" 
                         type="text" 
@@ -54,10 +53,10 @@ export default function ContactForm() {
                     id="email" 
                 />
 
-                <label className="flex flex-col text-start" htmlFor="message">
+                <label className="flex flex-col text-start text-lg font-light" htmlFor="message">
                     Your message:
                     < textarea
-                        className="text-center flex text-start py-4 w-full h-40 border-b-1 focus:border-accent focus:border-b-2 focus:outline-none resize-y"
+                        className="text-center flex py-4 w-full h-40 text-start text-sm border-b-1 focus:border-accent focus:border-b-2 focus:outline-none resize-y"
                         id="message" 
                         placeholder="Your message goes here"
                     />
