@@ -32,25 +32,38 @@ export default function ContactForm() {
     }
 
     return (
-        <>
-            <form className="contact__form" onSubmit={handleSubmit}>
-                < Input 
-                    label="Your name" 
-                    type="text" 
-                    id="name" 
-                />
+        <div className="card bg-main-verylight flex flex-col my-5">
+            <form className="flex flex-col w-full text-start" onSubmit={handleSubmit}>
+                
+                <div className="flex flex-col tablet:flex-row">
+                    < Input 
+                        label="First name" 
+                        type="text" 
+                        id="name" 
+                    />
+                    < Input 
+                        label="Last name" 
+                        type="text" 
+                        id="surname"
+                    />
+                </div>
+
                 < Input 
                     label="Your email" 
                     type="email" 
                     id="email" 
                 />
-                < Input 
-                    label="Your message" 
-                    type="textarea" 
-                    id="message" 
-                    placeholder="Your message goes here"
-                />
-                <input className="form__input" type="submit" value="Envoyer" />
+
+                <label className="flex flex-col text-start" htmlFor="message">
+                    Your message:
+                    < textarea
+                        className="text-center flex text-start py-4 w-full h-40 border-b-1 focus:border-accent focus:border-b-2 focus:outline-none resize-y"
+                        id="message" 
+                        placeholder="Your message goes here"
+                    />
+                </label>
+
+                <input className="button button-accent mt-4" type="submit" value="Envoyer" />
             </form>
 
             <div className="success__message hidden">
@@ -59,6 +72,6 @@ export default function ContactForm() {
                     <br/>{formData.email}
                 </p>
             </div>
-        </>
+        </div>
     )
 }

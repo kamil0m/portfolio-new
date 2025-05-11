@@ -22,10 +22,13 @@ export default function Input({ label, type, id, placeholder }: FormInputProps) 
     }
 
     return (
-        <>
-            <label htmlFor={id}>{label}:
+        <div >
+            <label className="flex flex-col mb-2 tablet:flex-row font-light text-lg focus:text-accent" htmlFor={id}>
+                
+                {label}:
+
                 <input 
-                    className="form__input" 
+                    className="h-10 border-b-1 focus:border-accent focus:border-b-2 focus:outline-none" 
                     type={type} 
                     id={id} 
                     name={id} 
@@ -34,12 +37,14 @@ export default function Input({ label, type, id, placeholder }: FormInputProps) 
                     onBlur={handleBlur}
                     value={inputData}
                 />
-                <div className="error__message">
+
+                <div className="text-red-500 text-xs error__message">
                     {errorMessage}
                 </div>
+
             </label>
             
-        </>
+        </div>
         
     )
 }
