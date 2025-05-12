@@ -1,34 +1,72 @@
 import Input from "./Input"
 import { useState } from "react"
 
+interface FormData {
+    name: string;
+    email: string;
+    message: string;
+}
+
 export default function ContactForm() {
     
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        message: ''
+    const [formData, setFormData] = useState <FormData>({
+        name: 'tobedeleted',
+        email: 'tobedeleted',
+        message: 'tobedeleted'
     })
 
-    function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-        event.preventDefault()
+    const [status, setStatus] = useState<string>("");
+
+    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) =>{
+        event.preventDefault();
 
         const nameInput:string = (event.currentTarget as HTMLElement).querySelector<HTMLInputElement>('#name')!.value
-        
         const emailInput:string = (event.currentTarget as HTMLElement).querySelector<HTMLInputElement>('#email')!.value
-        
         const messageInput:string = (event.currentTarget as HTMLElement).querySelector<HTMLTextAreaElement>('#message')!.value
-        
         const successMessage:HTMLElement = document.querySelector('.success__message')!
     
-        setFormData({
+        const form = {
             name: nameInput,
             email: emailInput,
             message: messageInput
-        })
+        };
+
+        setFormData(form);
+
+        setStatus("Wysyłanie...");
         
-        console.log(formData)
-        successMessage.classList.remove('hidden')
+        console.log(form);
+        successMessage.classList.remove('hidden');
+
+        try {
+            const response = await fetch('http://localhost:5000/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(form)
+            });
+    
+            const result = await response.json();
+    
+            if (response.ok) {
+                setStatus("Wiadomość została wysłana!");
+                setFormData({
+                    name: "",
+                    email: "",
+                    message: "",
+                });
+                (event.target as HTMLFormElement).reset();
+            } else {
+                setStatus(`Błąd: ${result.message}`);
+            }
+        } catch (error) {
+            console.error("Błąd:", error);
+            setStatus("Wystąpił błąd podczas wysyłania wiadomości.");
+        }
     }
+
+
 
     return (
         <div className="card bg-main-verylight flex flex-col my-5">
@@ -71,6 +109,16 @@ export default function ContactForm() {
                     <br/>{formData.email}
                 </p>
             </div>
+            {status && <p className="text-green-500 font-bold text-lg mt-4"><span className="text-green-500">✓ </span>{status}</p>}
         </div>
     )
 }
+
+// Standard version to be tested later on :
+// const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+//     const { name, value } = e.target;
+//     setFormData(prev => ({
+//         ...prev,
+//         [name]: value,
+//     }));
+// };
