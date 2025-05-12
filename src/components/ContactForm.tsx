@@ -3,6 +3,7 @@ import { useState } from "react"
 
 interface FormData {
     name: string;
+    surname: string;
     email: string;
     message: string;
 }
@@ -10,9 +11,10 @@ interface FormData {
 export default function ContactForm() {
     
     const [formData, setFormData] = useState <FormData>({
-        name: 'tobedeleted',
-        email: 'tobedeleted',
-        message: 'tobedeleted'
+        name: '',
+        surname: '',
+        email: '',
+        message: ''
     })
 
     const [status, setStatus] = useState<string>("");
@@ -21,12 +23,14 @@ export default function ContactForm() {
         event.preventDefault();
 
         const nameInput:string = (event.currentTarget as HTMLElement).querySelector<HTMLInputElement>('#name')!.value
+        const surnameInput:string = (event.currentTarget as HTMLElement).querySelector<HTMLInputElement>('#surname')!.value
         const emailInput:string = (event.currentTarget as HTMLElement).querySelector<HTMLInputElement>('#email')!.value
         const messageInput:string = (event.currentTarget as HTMLElement).querySelector<HTMLTextAreaElement>('#message')!.value
         const successMessage:HTMLElement = document.querySelector('.success__message')!
     
         const form = {
             name: nameInput,
+            surname: surnameInput,
             email: emailInput,
             message: messageInput
         };
@@ -39,6 +43,7 @@ export default function ContactForm() {
         successMessage.classList.remove('hidden');
 
         try {
+            console.log(form);
             const response = await fetch('http://localhost:5000/send-email', {
                 method: 'POST',
                 headers: {
@@ -48,11 +53,19 @@ export default function ContactForm() {
             });
     
             const result = await response.json();
+
+            // let result = {};
+            // try {
+            //     result = await response.json();
+            // } catch {
+            // result = { message: 'Brak treści odpowiedzi z serwera' };
+            // }
     
             if (response.ok) {
                 setStatus("Wiadomość została wysłana!");
                 setFormData({
                     name: "",
+                    surname: "",
                     email: "",
                     message: "",
                 });
