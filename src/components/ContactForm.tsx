@@ -1,137 +1,166 @@
-import Input from "./Input"
+// import Input from "./Input"
 import { useState } from "react"
-
-interface FormData {
-    name: string;
-    surname: string;
-    email: string;
-    message: string;
-}
+import { useForm } from "react-hook-form"
+import useWeb3Forms from "@web3forms/react"
 
 export default function ContactForm() {
+
+    const {
+        register,
+        handleSubmit,
+        reset,
+        watch,
+        control,
+        setValue,
+        formState: { errors, isSubmitSuccessful, isSubmitting },
+    } = useForm({
+        mode: "onTouched",
+      });
+
+    const [isSuccess, setIsSuccess] = useState(false);
+    const [message, setMessage] = useState(false);
     
-    const [formData, setFormData] = useState <FormData>({
-        name: '',
-        surname: '',
-        email: '',
-        message: ''
-    })
+    const apiKey = "a7392044-834a-4483-aa73-f6ecd00defc2";
 
-    const [status, setStatus] = useState<string>("");
-
-    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) =>{
-        event.preventDefault();
-
-        const nameInput:string = (event.currentTarget as HTMLElement).querySelector<HTMLInputElement>('#name')!.value
-        const surnameInput:string = (event.currentTarget as HTMLElement).querySelector<HTMLInputElement>('#surname')!.value
-        const emailInput:string = (event.currentTarget as HTMLElement).querySelector<HTMLInputElement>('#email')!.value
-        const messageInput:string = (event.currentTarget as HTMLElement).querySelector<HTMLTextAreaElement>('#message')!.value
-        const successMessage:HTMLElement = document.querySelector('.success__message')!
-    
-        const form = {
-            name: nameInput,
-            surname: surnameInput,
-            email: emailInput,
-            message: messageInput
-        };
-
-        setFormData(form);
-
-        setStatus("Wysyłanie...");
-        
-        console.log(form);
-        successMessage.classList.remove('hidden');
-
-        try {
-            console.log(form);
-            const response = await fetch('http://localhost:5000/send-email', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(form)
-            });
-    
-            const result = await response.json();
-
-            // let result = {};
-            // try {
-            //     result = await response.json();
-            // } catch {
-            // result = { message: 'Brak treści odpowiedzi z serwera' };
-            // }
-    
-            if (response.ok) {
-                setStatus("Wiadomość została wysłana!");
-                setFormData({
-                    name: "",
-                    surname: "",
-                    email: "",
-                    message: "",
-                });
-                (event.target as HTMLFormElement).reset();
-            } else {
-                setStatus(`Błąd: ${result.message}`);
-            }
-        } catch (error) {
-            console.error("Błąd:", error);
-            setStatus("Wystąpił błąd podczas wysyłania wiadomości.");
-        }
-    }
-
-
+    const { submit: onSubmit } = useWeb3Forms({
+        access_key: apiKey,
+        settings: {
+          from_name: "Acme Inc",
+          subject: "New Contact Message from your Website",
+        },
+        onSuccess: (msg, data) => {
+          setIsSuccess(true);
+          setMessage(msg);
+          reset();
+        },
+        onError: (msg, data) => {
+          setIsSuccess(false);
+          setMessage(msg);
+        },
+      });
 
     return (
-        <div className="card bg-main-verylight flex flex-col my-5">
-            <form className="flex flex-col w-full text-start" onSubmit={handleSubmit}>
-                
-                <div className="flex flex-col tablet:flex-row tablet:gap-x-2">
-                    < Input 
-                        label="First name" 
-                        type="text" 
-                        id="name" 
-                    />
-                    < Input 
-                        label="Last name" 
-                        type="text" 
-                        id="surname"
-                    />
+        <div className="card bg-main-verylight flex flex-col mt-6 tablet:w-full tablet:mx-auto">
+
+            <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col w-full text-start">
+                <input
+                type="checkbox"
+                id=""
+                className="hidden"
+                style={{ display: "none" }}
+                {...register("botcheck")}></input>
+
+                <div className="mb-5">
+                <input
+                    type="text"
+                    placeholder="Full Name"
+                    // autoComplete="false"
+                    className={`w-full px-4 py-3 border-1 placeholder:main-dark outline-none   focus:ring-4  ${
+                    errors.name
+                        ? "border-red-600 focus:border-red-600 ring-red-100 "
+                        : "border-gray-300 focus:border-gray-600 ring-gray-100 "
+                    }`}
+                    {...register("name", {
+                    required: "Full name is required",
+                    maxLength: 80,
+                    })}
+                />
+                {errors.name && (
+                    <div className="mt-1 text-red-600">
+                    <small>{errors.name.message}</small>
+                    </div>
+                )}
                 </div>
 
-                < Input 
-                    label="Your email" 
-                    type="email" 
-                    id="email" 
-                />
-
-                <label className="flex flex-col text-start text-lg font-light" htmlFor="message">
-                    Your message:
-                    < textarea
-                        className="text-center flex py-4 w-full h-40 text-start text-sm border-b-1 focus:border-accent focus:border-b-2 focus:outline-none resize-y"
-                        id="message" 
-                        placeholder="Your message goes here"
-                    />
+                <div className="mb-5">
+                <label htmlFor="email_address" className="sr-only">
+                    Email Address
                 </label>
+                <input
+                    id="email_address"
+                    type="email"
+                    placeholder="Email Address"
+                    name="email"
+                    // autoComplete="false"
+                    className={`w-full px-4 py-3 border-1 outline-none focus:ring-4 placeholder:main-dark ${
+                    errors.email
+                        ? "border-red-600 focus:border-red-600 ring-red-100"
+                        : "border-gray-300 focus:border-gray-600 ring-gray-100"
+                    }`}
+                    {...register("email", {
+                    required: "Enter your email",
+                    pattern: {
+                        value: /^\S+@\S+$/i,
+                        message: "Please enter a valid email",
+                    },
+                    })}
+                />
+                {errors.email && (
+                    <div className="mt-1 text-red-600">
+                    <small>{errors.email.message}</small>
+                    </div>
+                )}
+                </div>
 
-                <input className="button button-accent mt-4" type="submit" value="Envoyer" />
+                <div className="mb-3">
+                <textarea
+                    name="message"
+                    placeholder="Your Message"
+                    className={`w-full px-4 py-3 border-1 outline-none  h-36 focus:ring-4  ${
+                    errors.message
+                        ? "border-red-600 focus:border-red-600 ring-red-100"
+                        : "border-gray-300 focus:border-gray-600 ring-gray-100"
+                    }`}
+                    {...register("message", {
+                    required: "Enter your Message",
+                    })}
+                />
+                {errors.message && (
+                    <div className="mt-1 text-red-600">
+                    {" "}
+                    <small>{errors.message.message}</small>
+                    </div>
+                )}
+                </div>
+
+                <button
+                type="submit"
+                className="button button-accent w-auto py-4 font-semibold text-white transition-colors focus:outline-none focus:ring-offset-2 focus:ring focus:ring-gray-200 px-7">
+                {isSubmitting ? (
+                    <svg
+                    className="w-5 h-5 mx-auto text-white animate-spin"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24">
+                    <circle
+                        className="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        strokeWidth="4"></circle>
+                    <path
+                        className="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                    </svg>
+                ) : (
+                    "Send Message"
+                )}
+                </button>
             </form>
 
-            <div className="success__message hidden">
-                <p>Thank you for your message, {formData.name}!</p>
-                <p>I will get back to you at 
-                    <br/>{formData.email}
-                </p>
+            {isSubmitSuccessful && isSuccess && (
+            <div className="mt-3 text-sm text-center text-green-500">
+            {message || "Success. Message sent successfully"}
             </div>
-            {status && <p className="text-green-500 font-bold text-lg mt-4"><span className="text-green-500">✓ </span>{status}</p>}
+            )}
+            {isSubmitSuccessful && !isSuccess && (
+                <div className="mt-3 text-sm text-center text-red-500">
+                {message || "Something went wrong. Please try later."}
+                </div>
+            )}
+            
         </div>
     )
 }
-
-// Standard version to be tested later on :
-// const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-//     const { name, value } = e.target;
-//     setFormData(prev => ({
-//         ...prev,
-//         [name]: value,
-//     }));
-// };
