@@ -9,33 +9,35 @@ export default function ContactForm() {
         register,
         handleSubmit,
         reset,
-        watch,
-        control,
-        setValue,
+        // watch,
+        // control,
+        // setValue,
         formState: { errors, isSubmitSuccessful, isSubmitting },
     } = useForm({
         mode: "onTouched",
       });
 
     const [isSuccess, setIsSuccess] = useState(false);
-    const [message, setMessage] = useState(false);
+    const [message, setMessage] = useState<string | boolean>(false);
     
     const apiKey = "a7392044-834a-4483-aa73-f6ecd00defc2";
 
     const { submit: onSubmit } = useWeb3Forms({
         access_key: apiKey,
         settings: {
-          from_name: "Acme Inc",
+          from_name: "My portfolio",
           subject: "New Contact Message from your Website",
         },
-        onSuccess: (msg, data) => {
-          setIsSuccess(true);
-          setMessage(msg);
-          reset();
+        // onSuccess: (msg, data) => {
+        onSuccess: (msg) => {
+            setIsSuccess(true);
+            setMessage(msg);
+            reset();
         },
-        onError: (msg, data) => {
-          setIsSuccess(false);
-          setMessage(msg);
+        // onError: (msg, data) => {
+        onError: (msg) => {
+            setIsSuccess(false);
+            setMessage(msg);
         },
       });
 
@@ -67,7 +69,7 @@ export default function ContactForm() {
                 />
                 {errors.name && (
                     <div className="mt-1 text-red-600">
-                    <small>{errors.name.message}</small>
+                    <small>{typeof errors.name?.message === "string" ? errors.name.message : ""}</small>
                     </div>
                 )}
                 </div>
@@ -80,7 +82,7 @@ export default function ContactForm() {
                     id="email_address"
                     type="email"
                     placeholder="Email Address"
-                    name="email"
+                    // name="email"
                     // autoComplete="false"
                     className={`w-full px-4 py-3 border-1 outline-none focus:ring-4 placeholder:main-dark ${
                     errors.email
@@ -97,14 +99,14 @@ export default function ContactForm() {
                 />
                 {errors.email && (
                     <div className="mt-1 text-red-600">
-                    <small>{errors.email.message}</small>
+                    <small>{typeof errors.email?.message === "string" ? errors.email.message : ""}</small>
                     </div>
                 )}
                 </div>
 
                 <div className="mb-3">
                 <textarea
-                    name="message"
+                    // name="message"
                     placeholder="Your Message"
                     className={`w-full px-4 py-3 border-1 outline-none  h-36 focus:ring-4  ${
                     errors.message
@@ -118,7 +120,7 @@ export default function ContactForm() {
                 {errors.message && (
                     <div className="mt-1 text-red-600">
                     {" "}
-                    <small>{errors.message.message}</small>
+                    <small>{typeof errors.message?.message === "string" ? errors.message.message : ""}</small>
                     </div>
                 )}
                 </div>

@@ -3,9 +3,9 @@ export default function Logo() {
     <div className="flex flex-col tablet:flex-row tablet:items-center font-display">
 
         <div className="flex flex-row items-center font-semibold text-2xl">
-            <div className="h-[1em] w-[1em] bg-blue-500 mr-[1em] "></div>
+            <div className="h-[1em] w-[1em] bg-accent mr-[1em] "></div>
             <div>
-                <span className="xtext-2xl">Kamil Markowski</span>
+                <span className="text-2xl">Kamil Markowski</span>
             </div>
         </div>
 

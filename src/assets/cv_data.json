@@ -295,6 +295,11 @@
       "id": "4",
       "name": "Hiking",
       "levelOutOf5": 3
+    },
+    {
+      "id": "3",
+      "name": "Cycling",
+      "levelOutOf5": 3
     }
   ]
 }

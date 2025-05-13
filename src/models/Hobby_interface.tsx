@@ -1,5 +1,5 @@
 export default interface Hobby {
-    id: number;
+    id: string;
     name: string;
     levelOutOf5: number;
 }

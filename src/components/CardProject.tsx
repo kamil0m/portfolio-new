@@ -4,7 +4,7 @@ import { FaGithub } from "react-icons/fa";
 export default function CardProject({ project }: {project: Project}) {
 
   return (
-    <div className="card flex flex-col w-full p-0 mb-4 title-project
+    <div className="card flex flex-col w-full p-0 title-project
     tablet:flex-row tablet:justify-between">
 
       <div className="relative bg-main-verylight p-6 tablet:w-2/5">

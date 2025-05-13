@@ -9,14 +9,16 @@ export default function Cv() {
   return (
     <div className="relative flex flex-col grow">
       < MainBackground />
-      <div className="tablet:max-w-3/5 tablet:mx-auto">
-        <h2 className="pt-10 w-full text-center">CV</h2>
+      <section className="pt-14 tablet:max-w-3/5 tablet:mx-auto">
+        <h2 className="w-full text-center">CV</h2>
         <div className="px-6 pt-10">
 
           <section>
             <div className="flex flex-row justify-between items-center pb-6">
               <h4 className="">Experience</h4>
-              <div className="button button-accent text-sm">Download CV</div>
+              <a className="button button-accent text-sm"
+              href="public/2025_CV_Kamil_MARKOWSKI.pdf" 
+              download="2025_CV_Kamil_MARKOWSKI.pdf">Download CV</a>
             </div>
 
             {cvData.experience.map((experience) => (
@@ -45,7 +47,7 @@ export default function Cv() {
           </section>
 
         </div>
-      </div> 
+      </section> 
     </div>
   )
 }

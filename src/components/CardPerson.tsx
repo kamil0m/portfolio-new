@@ -1,9 +1,11 @@
 import aboutmePhoto from '../assets/KM_aboutme.jpeg'
 import { NavLink } from 'react-router-dom'
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import CardPersonProps from '../models/CardPersonProps_interface.tsx';
 
 
-export default function CardPerson(props: object) {
+
+export default function CardPerson(props: CardPersonProps) {
   return (
     <div className="card flex flex-col items-center w-[340px] h-auto bg-main 
     tablet:top-200 tablet:translate-x-1/2 tablet:p-0">

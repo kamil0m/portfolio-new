@@ -7,11 +7,11 @@ export default function Contact() {
 
       < MainBackground />
 
-      <section className="px-6 pt-10 text-center tablet:max-w-3/5 mb-10 tablet:w-full tablet:mx-auto">
+      <section className="pt-14 text-center tablet:max-w-3/5 mb-10 tablet:w-full tablet:mx-auto">
 
         <h2 className="text-center">Contact</h2>
-        <p>Interested in my work?
-        <br />Let's get in touch!</p>
+        <h3 className="mt-6">Interested in my work?
+        <br />Let's get in touch!</h3>
 
         < ContactForm />
         
