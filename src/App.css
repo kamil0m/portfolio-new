@@ -67,6 +67,13 @@
   --color-main-verylight: rgba(255, 255, 255, 1);
   --color-main-dark: rgba(228, 213, 200, 1);
   --color-accent: rgba(0, 72, 249, 1);
+
+  /* --color-accent: rgba(220, 130, 0, 1);
+  --color-main-dark: rgba(129, 185, 239, 1);
+  --color-main: rgba(222, 231, 231, 1);
+  --color-main-light: rgba(245, 233, 224, 1);
+  --color-main-verylight: rgba(255, 248, 240, 1); */
+
 }
 
 @layer components {
@@ -82,6 +89,7 @@
 
   .button-accent {
     @apply bg-accent border-2 border-accent text-white active:text-black active:bg-main;
+    /* @apply bg-accent border-2 border-accent text-black active:bg-main; */
   }
 
   .button-transparent {

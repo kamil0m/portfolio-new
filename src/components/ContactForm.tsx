@@ -127,7 +127,7 @@ export default function ContactForm() {
 
                 <button
                 type="submit"
-                className="button button-accent w-auto py-4 font-semibold text-white transition-colors focus:outline-none focus:ring-offset-2 focus:ring focus:ring-gray-200 px-7">
+                className="button button-accent w-auto py-4 font-semibold transition-colors focus:outline-none focus:ring-offset-2 focus:ring focus:ring-gray-200 px-7">
                 {isSubmitting ? (
                     <svg
                     className="w-5 h-5 mx-auto text-white animate-spin"

@@ -18,7 +18,7 @@ export default function Cv() {
               <h4 className="">Experience</h4>
               <a className="button button-accent text-sm"
               href="public/2025_CV_Kamil_MARKOWSKI.pdf" 
-              download="2025_CV_Kamil_MARKOWSKI.pdf">Download CV</a>
+              download="2025_CV_Kamil_MARKOWSKI">Download CV</a>
             </div>
 
             {cvData.experience.map((experience) => (
