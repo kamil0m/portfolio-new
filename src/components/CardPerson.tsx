@@ -18,7 +18,7 @@ export default function CardPerson(props: CardPersonProps) {
 
       {/* For mobile view only */}
       <div className="flex mt-10 gap-6 tablet:hidden">
-        < NavLink className="button button-accent" to="/">CV</NavLink>
+        < NavLink className="button button-accent" to="/cv">CV</NavLink>
         < NavLink className="button button-transparent" to="/projects">Projects</NavLink>
       </div>
 
