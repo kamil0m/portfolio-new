@@ -74,6 +74,12 @@
   --color-main-light: rgba(245, 233, 224, 1);
   --color-main-verylight: rgba(255, 248, 240, 1); */
 
+  
+  --animate-fade-in-down: fade-in-down 400ms ease-out forwards;
+  @keyframes fade-in-down {
+    0% { opacity: .7; transform: translateY(-100%); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
 }
 
 @layer components {

@@ -7,7 +7,7 @@ import CardPersonProps from '../models/CardPersonProps_interface.tsx';
 
 export default function CardPerson(props: CardPersonProps) {
   return (
-    <div className="card flex flex-col items-center w-[340px] h-auto bg-main 
+    <div className="card p-0 flex flex-col items-center w-[340px] h-auto bg-main 
     tablet:top-200 tablet:translate-x-1/2 tablet:p-0">
       <div className="flex flex-col items-center w-40">
         <div className="w-full aspect-square bg-cover rounded-full mt-10"
