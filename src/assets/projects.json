@@ -1,5 +1,53 @@
 [
     {
+        "id": "chatapp",
+        "name": "ChatApp",
+        "description": "A real-time one-on-one chat application supporting image sharing, dynamic theming, and an online users filter. Built on the robust MERN stack, ChatApp provides seamless and secure communication with a modern, responsive interface.",
+        "context": "This project was developed as a practical full-stack exercise to explore real-time communication features using web sockets, user interaction dynamics, and media uploads in a scalable web environment.",
+        "technologiesUsed": [
+            {
+            "id": "1",
+            "name": "MongoDB",
+            "purpose": "Used as the main database for storing users and messages."
+            },
+            {
+            "id": "2",
+            "name": "Express.js",
+            "purpose": "Served as the backend web framework to handle routing, middleware, and API logic."
+            },
+            {
+            "id": "3",
+            "name": "React.js",
+            "purpose": "Built the frontend interface using components, state management, and hooks for responsiveness and interactivity."
+            },
+            {
+            "id": "4",
+            "name": "Node.js",
+            "purpose": "Provided the JavaScript runtime environment for the server and handled asynchronous operations."
+            },
+            {
+            "id": "5",
+            "name": "Socket.io",
+            "purpose": "Enabled real-time, bidirectional communication between clients for instant messaging functionality."
+            },
+            {
+            "id": "6",
+            "name": "Cloudinary",
+            "purpose": "Managed and hosted image uploads shared during conversations, ensuring fast and secure media delivery."
+            },
+            {
+            "id": "7",
+            "name": "TailwindCSS & DaisyUI",
+            "purpose": "Handled styling and theme switching with built-in utility classes and ready-made components."
+            }
+        ],
+        "technologiesOthers": [],
+        "color": "#ffffff",
+        "image": "https://res.cloudinary.com/daqj3iucx/image/upload/v1748899997/Capture_d_e%CC%81cran_2025-06-02_a%CC%80_22.30.59_rin1xo.png",
+        "urlGithub": "https://github.com/kamil0m/ChatApp",
+        "urlDemo": "https://chatapp-ovnf.onrender.com/"
+    },
+    {
         "id": "lexiflash",
         "name": "LexiFlash",
         "description": "A vocabulary learning application designed for individual users. Utilizing vocabulary lists and flashcards, it aims to facilitate effective language learning. Unlike many other vocabulary building apps, LexiFlash offers unique features, including personalized vocabulary sets and immediate feedback on incorrect answers. This ensures a customized learning experience, allowing users to create their own vocabulary lists and review correct answers before making another attempt.",

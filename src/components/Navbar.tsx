@@ -29,7 +29,6 @@ export default function Navbar() {
                 id="navbar__mobile"
                 className="
                 animate-fade-in-down
-
                 hidden flex flex-col items-center justify-center absolute left-0 top-0 w-full bg-main h-screen z-10 uppercase font-semibold text-2xl
                 tablet:static tablet:flex tablet:flex-row tablet:justify-end tablet:h-auto tablet:bg-transparent tablet:w-auto tablet:gap-4 tablet:font-light tablet:text-sm"
                 onClick={() => toggleMenu()} 
