@@ -14,7 +14,7 @@ export default function Footer() {
           <div className="text-xs">kamil0markowski@gmail.com</div>
         </div>
         <div>
-          <h5 className="my-3">En ligne</h5>
+          <h5 className="my-3">On line</h5>
           <div className="flex text-md font-light gap-2 tablet:justify-center">
             <a target="_blank" href="https://github.com/kamil0m">
               <FaGithub />
